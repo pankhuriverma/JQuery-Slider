@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+	.main{
+		height: 350px;
+			width: 800px;
+			/*background-color:red;*/
+			/*position: absolute;*/
+			margin-left: 270px;
+			/*overflow: hidden;*/
+
+	}
+		
+
+
+
+
+		.main1{
+			height: 350px;
+			width: 800px;
+			/*background-color:red;*/
+			position: absolute;
+			/*margin-left: 270px;*/
+			/*overflow: hidden;*/
+
+
+		}
+
+		.main1 img{
+			width:800px;
+			position: absolute;
+			/*overflow: hidden;*/
+			height: 300px;
+
+		}
+
+		.text {
+			height: 100px;
+			width: 150px;
+			/*background-color: red;*/
+			position: absolute;
+			margin-left: 650px;
+			margin-top: 200px;
+			font-size: 26px;
+			color: white;
+		}
+
+		.text p{
+			position: absolute;
+		}
+
+		
+
+	
+	</style>
+</head>
+<body>
+
+	<div class="main">
+		
+
+
+
+
+		<div class="main1">
+			<img src="p1.jpg">
+			<img src="p2.jpg">
+			<img src="p3.jpg">
+			<img src="p4.jpg">
+			<img src="p5.jpg">
+		</div>
+		
+
+
+
+
+		<div class="text">
+			<p>M S Dhoni</p>
+			<p>Virat Kohli</p>
+			<p>Sachin Tendulkar</p>
+			<p>Virender Sehwag</p>
+			<p>Kapil Dev</p>
+		</div>
+		
+	</div>
+
+
+
+	
+
+
+	
+	
+
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".main1 img:not(:first)").hide();
+			$(".text p:not(:first)").hide();
+
+			setInterval(function(){
+				$(".main1 img:first").fadeOut(1000).next().fadeIn(1000).end().appendTo(".main1");
+				$(".text p:first").fadeOut(1000).next().fadeIn(1000).end().appendTo(".text");
+
+
+			},2000);
+			
+				
+			});
+
+
+		
+	</script>
+
+</body>
+</html>
